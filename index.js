@@ -36,7 +36,7 @@ function playSound(key) {
             tom4.play();
             break;
 
-        default: console.log(buttoninnerHTML);
+        default: console.log(key);
         
     }
 }
