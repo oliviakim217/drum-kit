@@ -1,2 +1,2 @@
 # drum-kit
-play drums with your keyboard!
+Play drums with your mouse and keyboard!
