@@ -41,12 +41,26 @@ function playSound(key) {
     }
 }
 
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector(`.${currentKey}`); //<button class="w drum">w</button>
+    
+    // Add the pressed class
+    activeButton.classList.add("pressed");
+    // Remove the pressed class
+    setTimeout(function() {
+         activeButton.classList.remove("pressed");
+    }, 100);
+}   
+
+
+
 // Add event listener to all buttons
 for (var i=0; i<document.querySelectorAll(".drum").length; i++) {
     
     document.querySelectorAll(".drum")[i].addEventListener("click", function() { 
-        var buttoninnerHTML = this.innerHTML;
-        playSound(buttoninnerHTML);
+        var buttonInnerHTML = this.innerHTML;
+        playSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     }
     );
 }
@@ -55,6 +69,6 @@ for (var i=0; i<document.querySelectorAll(".drum").length; i++) {
 // Add event listener to keyboard press
 document.addEventListener("keydown", function(event) {
     playSound(event.key);
+    buttonAnimation(event.key);
     }
-
 );
