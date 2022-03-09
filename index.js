@@ -41,6 +41,7 @@ function playSound(key) {
     }
 }
 
+
 function buttonAnimation(currentKey) {
     var activeButton = document.querySelector(`.${currentKey}`); //<button class="w drum">w</button>
     
@@ -51,7 +52,6 @@ function buttonAnimation(currentKey) {
          activeButton.classList.remove("pressed");
     }, 100);
 }   
-
 
 
 // Add event listener to all buttons
